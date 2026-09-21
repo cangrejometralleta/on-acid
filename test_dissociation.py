@@ -8,6 +8,7 @@ Every expectation is Spelled: a textbook number, a chemical invariant
 written out here, or a limit the chemistry already knows.
 """
 
+import dataclasses
 import math
 import unittest
 
@@ -348,7 +349,7 @@ class TheTableAnswersToEveryNameItWasGiven(unittest.TestCase):
         self.assertIn("Kb=", repr(d.find_species("NH3")))
 
     def test_a_species_is_frozen(self):
-        with self.assertRaises(Exception):
+        with self.assertRaises(dataclasses.FrozenInstanceError):
             d.find_species("CH3COOH").name = "something else"
 
 

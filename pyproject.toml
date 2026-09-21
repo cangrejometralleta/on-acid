@@ -28,3 +28,11 @@ Source = "https://github.com/cangrejometralleta/on-acid"
 
 [tool.setuptools]
 py-modules = ["dissociation"]
+
+[tool.ruff]
+line-length = 100
+
+# The gate Catches bugs, never taste. The aligned tables in `dissociation.py`
+# and the order of `__all__` are Deliberate, so no formatter Reflows them.
+[tool.ruff.lint]
+select = ["E", "F", "B"]

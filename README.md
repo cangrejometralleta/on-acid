@@ -9,12 +9,18 @@ where the assigned method Wanted the quadratic worked out for every exercise.
 ## The Doors
 
 ```
-./build.sh   # format, types, tests, then the wheel
-./run.sh     # the worked demo
+./build.sh    ./run.sh     # unix
+build.cmd     run.cmd      # windows
 ```
 
-`build.sh` Refuses to build what does not pass, and a refusal Names the line that works.
-Absent tooling Says so and Steps aside; the test gate never does.
+`build.sh` Fetches its own tooling into `.venv`, then Runs lint, types, tests and the wheel.
+It Refuses to build what does not pass, and a refusal Names the line that works.
+The lint Catches bugs and never taste: the aligned tables are Deliberate, so no formatter Reflows them.
+
+The `.cmd` files are Shims. They name, call and Propagate the exit code, and nothing else;
+`run-bash.cmd` Finds the interpreter once, for both of them.
+They are read from here and Proven only over there, so until someone Runs them on Windows,
+call them Unverified.
 
 ## The Coefficients never Change
 

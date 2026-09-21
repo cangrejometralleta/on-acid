@@ -1,0 +1,3 @@
+# The line endings Live here, never in each machine's editor.
+*.cmd text eol=crlf
+*.sh  text eol=lf
