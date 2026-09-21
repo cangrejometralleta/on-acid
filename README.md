@@ -178,6 +178,15 @@ Eight mutations were Applied and reverted; the one that Survived the first pass
 python -m unittest discover -p 'test_*.py'
 ```
 
+The floor in `requires-python` is Measured, not guessed.
+The suite Passes on 3.9 through 3.14, and on 3.8 as well, which is Older than the floor admits:
+
+```
+for v in 3.9 3.10 3.11 3.12 3.13 3.14; do
+	uv run --isolated --no-project --python $v python -m unittest discover -p 'test_*.py'
+done
+```
+
 ## State
 
 Identifiers, prose and tabulated names are English throughout, and Spanish Survives only in the aliases.
