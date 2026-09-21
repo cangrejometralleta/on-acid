@@ -1,8 +1,45 @@
+# What the Repository does not Carry.
+#
+# `.canonignore` Says what the repository Carries but does not Teach.
+# This Says what it never Carries at all.
+
+# Vendor Entrances. Every one of them Resolves to `.agents/`, which is
+# the canonical source and Lives in its own repository. An entrance
+# committed here is a second copy waiting to Drift.
 .agents/
+.claude/
 .codex/
-__pycache__/
-*.py[cod]
+.github/agents/
+.github/skills/
+CLAUDE.md
+.cursor/
+.windsurf/
+.aider*
+
+# Vendored and Generated. Present on Disk, Written by no one here.
+node_modules/
+vendor/
+third_party/
+target/
+.mvn/
+mvnw
+mvnw.cmd
+go.sum
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+uv.lock
+poetry.lock
+
+# The Artefacts this repository Builds, and the tooling it Fetches.
 build/
 dist/
 *.egg-info/
 .venv/
+
+# What Python Leaves behind.
+__pycache__/
+*.py[cod]
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
