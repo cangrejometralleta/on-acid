@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "on-acid"
+version = "0.1.0"
+description = "Acid-base equilibrium without solving a quadratic by hand."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.9"
+dependencies = []
+keywords = ["chemistry", "equilibrium", "ph", "titration", "buffer"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Chemistry",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Education",
+]
+
+[project.scripts]
+on-acid = "dissociation:demo"
+
+[project.urls]
+Homepage = "https://github.com/cangrejometralleta/on-acid"
+Source = "https://github.com/cangrejometralleta/on-acid"
+
+[tool.setuptools]
+py-modules = ["dissociation"]
